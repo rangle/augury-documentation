@@ -136,13 +136,13 @@ Augury provides a quick and convenient way to jump to the source code of a selec
 
 <img src="images/view-source.png">
 
-Following along from the previous step, with `MessageEntryComponent` slelected, click on "View Source". This will bring up the source code in DevTools by switching to the "Sources" tab.
+Following along from the previous step, with `MessageEntryComponent` selected, click on "View Source". This will bring up the source code in DevTools by switching to the "Sources" tab.
 
 Earlier under section "Firing Events" we emitted the `messageEvent` event. Looking at the source code, we can see this property is defined with the `@Output()` decorator.
 
 <img src="images/sources.png">
 
-If we want to convince ourselves that an event was triggered, we can set a breakpoint inside the event handler `onSend()` and emitt a new event.
+If we want to convince ourselves that an event was triggered, we can set a breakpoint inside the event handler `onSend()` and emit a new event.
 
 <img src="images/debugging-with-notes.png">
 

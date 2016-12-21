@@ -3,7 +3,7 @@
 ![Image Empty Form](images/form-empty.png)
 ## Description
 
-The _New User Form_ application exemplifies using a simple Angular _template_ based _Form_ that uses a data _service_ to hold the submitted dara. The data _service_ provides a data _stream_ to publish updates. A view _component_ subscribes to the data _stream_ and displays the most recent submitted user data in table format.
+The _New User Form_ application exemplifies using a simple Angular _template_ based _Form_ that uses a data _service_ to hold the submitted data. The data _service_ provides a data _stream_ to publish updates. A view _component_ subscribes to the data _stream_ and displays the most recent submitted user data in table format.
 
 To display the _user_ data table, enter values in the _Form_ and click on the _Create_ button.
 
@@ -100,7 +100,7 @@ Since property `userInfo` is not assigned a value, TypeScript removes it during 
 
 Let's _publish_ a hand crafted user info using Augury. In the _Properties_ tab, under _State_ expand property `newUserService` as shown below so the _Emit_ button is visible.
 
-Type in a Javascript object with the fields, _name_, _email_ and _password_ containing some value.
+Type in a JavaScript object with the fields, _name_, _email_ and _password_ containing some value.
 
 ![Image User Info Emit](images/emit-user-info.png)
 
@@ -126,7 +126,7 @@ Further reading material of the [Injector Dependency Tree](https://angular.io/do
 
 ### Understanding The Graph
 
-Let's look at how to read the _Injector_ graph. At the top we have the _Root injector_, conceptually this is what will be found in application `NgModule`, the root module. 
+Let's look at how to read the _Injector_ graph. At the top we have the _Root injector_, conceptually this is what will be found in application `NgModule`, the root module.
 
 In the code, looking at file `app.module.ts` we see 3 _components_ being declared by the root module as well as the one _service_ `NewUserService` that is registered with the _Root injector_.
 
