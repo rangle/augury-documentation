@@ -58,11 +58,13 @@ In code, a child component is a component that appears inside a component's `tem
       <app-messageentry></app-messageentry>
     </div>
 ...
+    <div>
       <div>
         <app-counter></app-counter>
       </div>
 ...
       <app-toggle></app-toggle>
+    </div>
 ```
 
 If we select `AppComponent` inside the "Component Tree", to the left inside the "Properties" tab we see the Component's properties under the "State" group.
@@ -88,8 +90,8 @@ export class AppComponent {
   ...
 }
 ```
-
-Augury will not show properties in a component if it has not be assigned a value, since TypeScript will simply compile it out. It's therefore suggested you assign a proper default value to each property. Having a property with an undefined value is poor coding practice and is an anti-pattern.
+[todo] Make this an aside section
+Augury will not show properties in a component if it has not be assigned a value, since TypeScript will simply compiles it out. It's therefore suggested you assign a proper default value to each property. Having a property with an undefined value is poor coding practice and is an anti-pattern.
 
 
 **Don’t**
