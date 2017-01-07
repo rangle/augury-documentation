@@ -492,4 +492,4 @@ understanding the Augury UI code in the `frontend` directory.
 * [Content Scripts](https://developer.chrome.com/extensions/content_scripts)
 
 # Updated Architecture Diagram
-<img src="https://github.com/rangle/augury-documentation/blob/master/images/angular_flow.png?raw=true" alt="Augury Architecture Diagram" style="width: 100%;"/>
+![Image Augury UML diagram](images/angular_flow.png)
