@@ -215,8 +215,3 @@ If we now look at the _Injector Graph_, we'll see the dashed line has disappeare
 The `NewUserService` is being injected into `UserInfoComponent` as well as being registered with `UserInfoComponent`. Pay attention to the ball in the graph for the _service_, it has now become filled.
 
 **Note**: These changes will break the code as the application no longer uses the same `singleton` _service_ to communicate data. This was for demonstration purpose only for the _Injector Graph_.
-
----
-### The Augury Team!
-
-[Copyright notice etc.]

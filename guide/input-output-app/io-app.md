@@ -149,7 +149,3 @@ If we want to convince ourselves that an event was triggered, we can set a break
 <img src="images/debugging-with-notes.png">
 
 This concludes our journey of looking at the IO App with Augury! You should now feel more comfortable debugging input, output, property binding and events in an Angular app.
-
-### The Augury Team!
-
-[Copyright notice etc.]
