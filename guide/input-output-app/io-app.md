@@ -1,6 +1,8 @@
 # Angular Input Output
 
-<img src="images/io-app.png" />
+<img src="images/io-app.png" style="width: 100%">
+
+[Launch Demo App](https://augury.angular.io/examples/input-output/app/)
 
 ## Description
 The Input Output Angular App demonstrates passing data inside a component as well as across components. The app makes uses of Angular input and output decorators as well as event and data binding.
@@ -146,6 +148,6 @@ Earlier under section "Firing Events" we emitted the `messageEvent` event. Looki
 
 If we want to convince ourselves that an event was triggered, we can set a breakpoint inside the event handler `onSend()` and emit a new event.
 
-<img src="images/debugging-with-notes.png">
+<img src="images/debugging-with-notes.png" style="width: 100%">
 
 This concludes our journey of looking at the IO App with Augury! You should now feel more comfortable debugging input, output, property binding and events in an Angular app.
