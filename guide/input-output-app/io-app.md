@@ -1,11 +1,9 @@
-# Angular Input Output
-
 <img src="images/io-app.png" style="width: 100%">
 
 [Launch Demo App](https://augury.angular.io/examples/input-output/app/)
 
 ## Description
-The Input Output Angular application demonstrates passing data inside a component as well as across components. The application makes uses of Angular input and output decorators as well as event and data binding.
+The _Input Output Angular_ application demonstrates passing data inside a component as well as across components. The application makes uses of Angular input and output decorators as well as event and data binding.
 
 The IO Application is composed of 5 components that are:
 
@@ -42,7 +40,7 @@ When DevTools is open, we select the _Augury_ tab, located on the far right.
 
 Once Augury is opened, the component view is presented in the _Component Tree_. It shows all the available components in the application, along with their parent-child relationship. Below we see the list of components discussed in the architecture section earlier.
 
-The application root component `AppComponent` is listed at the top. Shifted slightly to the right and appearing under the root component are all the children components.
+The application _root_ component `AppComponent` is listed at the top. Shifted slightly to the right and appearing under the _root_ component are all the children components.
 
 <img src="images/component-tree.png">
 

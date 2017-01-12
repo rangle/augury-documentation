@@ -1,5 +1,3 @@
-# Angular Form : New User
-
 ![Image Empty Form](images/form-empty.png)
 
 [Launch Demo App](https://augury.angular.io/examples/form-new-user/app/)
@@ -45,7 +43,7 @@ To use Augury, we must open DevTools first with the following keyboard shortcut.
 Ctrl + Shift + I (Cmd + Opt + I on Mac)
 ```
 
-When DevTools opens, select the **Augury** tab, located on the far right. In DevTools, under the _Component Tree_ tab, you will see the following parent and children tree relationship for Angular _components_ and any HTML DOM _elements_.
+When DevTools opens, select the **Augury** tab located on the far right. In DevTools, under the _Component Tree_ tab, you will see the following parent and children tree relationship for Angular _components_ and any HTML DOM _elements_.
 
 ![Image Component Tree](images/component-tree.png)
 
@@ -57,7 +55,7 @@ The default view setting, called the _Hybrid view_, can be changed from the sett
 
 Augury shows that the _New User Form_ Angular application has 3 components. The _Root_ component is called `AppComponent` which in turn contains 2 child components, `UserInfoComponent` and `FormNewUserComponent`.
 
-Select `AppComponent` from the _Component Tree_, on the right side in the _Properties_ tab, we see the single property `title` under State. Augury allows the value of property `title` to be modified. This is indicated by displaying a edit field with a dashed blue line on the bottom.
+Select `AppComponent` from the _Component Tree_, on the right side in the _Properties_ tab, we see the single property `title` under _State_. Augury allows the value of property `title` to be modified. This is indicated by displaying a edit field with a dashed blue line on the bottom.
 
 ![Image App Title Property](images/app-title.png)
 
@@ -65,21 +63,21 @@ Feel free to change the value and press the _Enter_ key to see the change get re
 
 ## Viewing Source Code
 
-In the _Properties_ tab, you will notice next to the name of the _component_ there is a clickable link called `(View Source)`. By clicking on it, DevTools will switch to the _Sources_ tab to show the TypeScript code of the selected _component_.
+In the _Properties_ tab, next to the name of the _component_ you will notice a clickable link called `(View Source)`. By clicking on it, DevTools will switch to the _Sources_ tab to show the TypeScript code of the selected _component_.
 
 ![Image DevTool Sources](images/devtools-sources.png).
 
-In the TypeScript code, you see `title` property assignment, which is what's displayed in Augury's _Properties_ tab.
+In the TypeScript code, you see `title` property assignment, which is what is displayed in Augury's _Properties_ tab.
 
 ```js
  title = 'Angular Form: New User';
  ```
 
-To return to Augury, just click on the Augury tab in DevTools.
+To return to Augury, click on the Augury tab.
 
 ## Dependency
 
-Let's take a look at the `UserInfoComponent`, select it from the _Component Tree_. In the _Properties_ tab, we see under _State_, the component has only one property `newUserService` and one dependency to `NewUserService`.
+Let us take a look at the `UserInfoComponent`, select it from the _Component Tree_. In the _Properties_ tab, we see under _State_, the component has only one property `newUserService` and one dependency to `NewUserService`.
 
 ![Image User Info Component](images/user-info-component.png)
 
@@ -101,7 +99,7 @@ export class UserInfoComponent {
 
 Since property `userInfo` is not assigned a value, TypeScript removes it during compile, this is why the property is not seen in the _Properties_ tab. Likewise `newUserService` is assigned a value (reference to service) by the _Injector_ using Angular's Dependency Injection (DI).
 
-Let's _publish_ a hand crafted user info using Augury. In the _Properties_ tab, under _State_ expand property `newUserService` as shown below so the _Emit_ button is visible.
+Let us _publish_ a hand crafted user info using Augury. In the _Properties_ tab, under _State_ expand property `newUserService` as shown below so the _Emit_ button is visible.
 
 Type in a JavaScript object with the fields, _name_, _email_ and _password_ containing some value.
 
@@ -119,7 +117,7 @@ Since the `surname` field was left out from the emitted user info data, it shows
 
 ## Injector Graph
 
-Besides looking at the source code to determine dependencies, Augury provides a visual way to see this through the _Injector Graph_ tab located next to the _Properties_ tab. If we select it, we'll see a dependency tree.
+Besides looking at the source code to determine dependencies, Augury provides a visual way to see this through the _Injector Graph_ tab located next to the _Properties_ tab. If we select it, we will see a dependency tree.
 
 ![Image User Info Injector Graph](images/user-info-injector-graph.png)
 
@@ -129,7 +127,7 @@ Further reading material of the [Injector Dependency Tree](https://angular.io/do
 
 ### Understanding The Graph
 
-Let's look at how to read the _Injector_ graph. At the top we have the _Root injector_, conceptually this is what will be found in application `NgModule`, the root module.
+Let us look at how to read the _Injector_ graph. At the top we have the _Root injector_, conceptually this is what will be found in application `NgModule`, the root module.
 
 In the code, looking at file `app.module.ts` we see 3 _components_ being declared by the root module as well as the one _service_ `NewUserService` that is registered with the _Root injector_.
 
@@ -171,15 +169,15 @@ export class AppComponent {
 
 Looking next at `UserInfoComponent`, we see a red line extending to the right, connecting to a circle labeled `NewUserService`. This denotes that _service_ `NewUserService` is being injected into _component_ `UserInfoComponent`.
 
-The dashed blue line from the _Root injector_ to `NewUserService` indicates this _service_ is provided by the _Root injector_. This identifies the _service_ as being a _singleton_ (global shared instance), that's available throughout the entire application.
+The dashed blue line from the _Root injector_ to `NewUserService` indicates this _service_ is provided by the _Root injector_. This identifies the _service_ as being a _singleton_ (global shared instance), that is available throughout the entire application.
 
 ### Colours
 
-Pay close attentions to the colours of the _components_ and _service_. The circle is hollow for _service_, this means the _service_ is not provided by the _component_, it's being provided from an ancestor in the dependency tree.
+Pay close attentions to the colours of the _components_ and _service_. The circle is hollow for _service_, this means the _service_ is not provided by the _component_, it is being provided from an ancestor in the dependency tree.
 
 ### Parent Level Injector
 
-Let's play around with _service_ registration. Instead of the _service_ being provided by the _Root_ injector, we're going to override this behaviour. Let's have `AppComponent` register the _service_ being used by `UserInfoComponent`. Open the file `app.component.ts` and add a `providers` array and `import` like this:
+Let us play around with _service_ registration. Instead of the _service_ being provided by the _Root_ injector, we are going to override this behaviour. Let us have `AppComponent` register the _service_ being used by `UserInfoComponent`. Open the file `app.component.ts` and add a `providers` array and `import` like this:
 
 ```js
 import { NewUserService  } from './new-user.service';
@@ -190,7 +188,7 @@ import { NewUserService  } from './new-user.service';
   ...
 ```
 
-Now the _Injector_ graph looks like this.
+Now the _Injector_ graph looks like this:
 
 ![Image User Info Injector Graph](images/user-info-injector-graph-1.png)
 
@@ -198,7 +196,7 @@ The only thing that has changed is the dashed blue line, coming from `AppCompone
 
 ### Component Level Injector
 
-A _service_ can also be injected at the _component_ level, to see how this would look from the _Injector Graph_, we can make a simple code alteration to class `UserInfoComponent` in the file `user-info.component.ts`.
+A _service_ can also be injected at the _component_ level. To see how this would look from the _Injector Graph_, we can make a simple code alteration to class `UserInfoComponent` in the file `user-info.component.ts`.
 
 In the `@Component` decorator, include the `providers` array like this:
 
@@ -211,7 +209,7 @@ In the `@Component` decorator, include the `providers` array like this:
 })
 ```
 
-If we now look at the _Injector Graph_, we'll see the dashed line has disappeared.
+If we now look at the _Injector Graph_, we will see the dashed line has disappeared.
 
 ![Image User Info Injector Graph](images/user-info-injector-graph-2.png)
 

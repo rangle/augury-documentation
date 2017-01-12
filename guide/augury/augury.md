@@ -56,7 +56,7 @@ The first view that is visible is the _Component Tree_ which shows **loaded** co
 
 The component tree shows the hierarchal relationship of the _components_. When a _component_ is selected, Augury presents additional information about the _component_ in the _Properties_ tab.
 
-<img src="images/properties.png" style="width: 80%">
+<img src="images/properties.png" style="width: 100%">
 
 Notable items of interest are:
 
