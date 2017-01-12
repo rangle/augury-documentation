@@ -73,7 +73,7 @@ If we select `AppComponent` inside the _Component Tree_, to the left inside the 
 
 <img src="images/properties-app-component.png">
 
-If you have looked through the example code for IO app, you will notice there is one property missing, that being the property `count`.
+If you have looked through the example code for IO application, you will notice there is one property missing, that being the property `count`.
 
 
 **app.component.ts**
@@ -109,7 +109,7 @@ class Foo {
 }
 ```
 
-In our example IO app, we have intentionally declared a property count with no assigned value to demonstrate the behaviour you would see in Augury. If you are not aware of why a property failed to appear, you might be confused.
+In our example IO application, we have intentionally declared a property count with no assigned value to demonstrate the behaviour you would see in Augury. If you are not aware of why a property failed to appear, you might be confused.
 
 However if we click on one of the counter buttons, this will initialize the count property with a value.
 
