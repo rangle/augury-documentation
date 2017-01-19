@@ -28,13 +28,14 @@ Component | Description
 `ToggleComponent` | Toggle button with state lights.
 
 ## Opening Augury
+
 To use Augury, we need to open DevTools.
 
 ```
 Ctrl + Shift + I (Cmd + Opt + I on Mac)
 ```
 
-When DevTools is open, we select the _Augury_ tab, located on the far right.
+When DevTools opens, select the _Augury_ tab located on the far right.
 
 ## Component View
 
