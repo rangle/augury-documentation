@@ -85,4 +85,4 @@ Take a look at the bottom of the router tree, you will notice `cities [Lazy]`, t
 
 ![Image Lazy routes](images/routes-lazy.gif)
 
-That all there is to Angular routes. We have looked at `router-outlet`, router tree and how it represents the path to the view and finally noticing lazy loaded routes.
+That is all there is to Angular routes. We have looked at `router-outlet`, router tree and how it represents the path to the view and finally noticing lazy loaded routes.
