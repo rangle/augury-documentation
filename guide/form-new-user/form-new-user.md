@@ -1,6 +1,6 @@
 ![Image Empty Form](images/form-empty.png)
 
-[Launch Demo App](https://augury.angular.io/examples/form-new-user/app/)
+[Launch Demo Application](https://augury.angular.io/examples/form-new-user/app/)
 
 ## Description
 

@@ -1,5 +1,7 @@
 ![Image NYC Metro](images/routes-nyc.png)
 
+[Launch Demo Application](https://augury.angular.io/examples/routes/app/)
+
 ## Description
 
 The _Routes_ Angular application demonstrates the uses of _routes_ as well as lazy loaded child routes. The application also makes use of multiple _router outlets_.
