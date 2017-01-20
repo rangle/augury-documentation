@@ -59,11 +59,11 @@ When DevTools opens, select the _Augury_ tab located on the far right.
 
 ## Router outlet
 
-With Augury opened, select `AppComponent` in _Component Tree_ then select the _Injector Graph_ tab. Both views shows `router-outlet` in _Component Tree_ as a child of `AppComponent`.
+With Augury opened, in the _Component Tree_ `AppComponent` shows `router-outlet` as a child element, this make sense since it is declared in the _template_.
 
 ![Image Component Tree](images/routes-ct.png)
 
-In the application, click on the _Parks_ button, this will load the `ParksComponent` and update _Component Tree_ view. You will notice a second `router-outlet` that appears under `ParksComponent`, this is where each of the park components will load into.
+In the browser, click on the _Parks_ button. This will load the `ParksComponent` and update _Component Tree_ view. You will notice a second `router-outlet` that appears under `ParksComponent`, this is where each of the park components will load into.
 
 ![Images Routes Parks](images/routes-parks.png)
 
