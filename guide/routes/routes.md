@@ -22,7 +22,7 @@ The _city_ module `city.module.ts` contains:
 
 ## Architecture
 
-The component code is simple, the `AppComponent` has a single router outlet. When the `ParksComponent` or `CityComponent` component is loaded, a second router outlet become available. Components from the child route get loaded into the second router outlet.
+The component code is simple, the `AppComponent` has a single router outlet. When the `ParksComponent` or `CityComponent` component is loaded, a second router outlet becomes available. Components from the child route get loaded into the second router outlet.
 
 <img src="images/router-outlet.png">
 
@@ -37,7 +37,7 @@ Routes|Component (View)
 `/parks/park2`|ParkTwoComponent
 `/parks/park3`|ParkThreeComponent
 
-The root path `/` gets redirect to `/home`. Also the lazy loaded route for `cities` is defined in the _root_ module.
+The root path `/` gets redirected to `/home`. Also the lazy loaded route for `cities` is defined in the _root_ module.
 
 The city module `city.module.ts` contains the routes for _cities_ below:
 
@@ -77,7 +77,7 @@ Notice how each child component is loaded under `ParksComponent` just underneath
 
 ## Routes
 
-To see the current _routes_ for the application, click on the _Router Tree_ tab. This will show all the defined routes that are currently loaded in the application. The routes shows the path to each component (think view). The `AppComponent` path is the root `/`. The path to `HomeComponent` is `/home`, likewise the path to the a child component `ParkThreeComponent` is `/parks/park3`.
+To see the current _routes_ for the application, click on the _Router Tree_ tab. This will show all the defined routes that are currently loaded in the application. The routes shows the path to each component (think view). The `AppComponent` path is the root `/`. The path to `HomeComponent` is `/home`, likewise the path to the child component `ParkThreeComponent` is `/parks/park3`.
 
 ![Image Route tree](images/router-tree.png)
 
