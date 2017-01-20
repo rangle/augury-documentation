@@ -79,7 +79,7 @@ Notice how each child component is loaded under `ParksComponent` just underneath
 
 To see the current _routes_ for the application, click on the _Router Tree_ tab. This will show all the defined routes that are currently loaded in the application. The routes shows the path to each component (think view). The `AppComponent` path is the root `/`. The path to `HomeComponent` is `/home`, likewise the path to the child component `ParkThreeComponent` is `/parks/park3`.
 
-![Image Route tree](images/router-tree.png)
+![Image Route tree](images/routes-router-tree.png)
 
 Take a look at the bottom of the router tree, you will notice `cities [Lazy]`, this is a lazy loaded route. This means that the child components for the path `/cities` will be loaded on demand, this takes place when the _Cities_ button is clicked. Let's see this in action, click on the _Cities_ button and pay attention to how the _lazy route_ is updated when the feature Angular module is loaded.
 
