@@ -26,7 +26,7 @@ The _city_ module `city.module.ts` contains:
 
 The component code is simple, the `AppComponent` has a single router outlet. When the `ParksComponent` or `CityComponent` component is loaded, a second router outlet becomes available. Components from the child route get loaded into the second router outlet.
 
-<img src="images/router-outlet.png">
+<img src="images/router-outlet.png" width="346">
 
 The _root_ module `app.module.ts` provides routes for _root_ and _parks_, which are:
 
