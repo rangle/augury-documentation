@@ -83,7 +83,7 @@ To see the current _routes_ for the application, click on the _Router Tree_ tab.
 
 ![Image Route tree](images/routes-router-tree.png)
 
-Take a look at the bottom of the router tree, you will notice `cities [Lazy]`, this is a lazy loaded route. This means that the child components for the path `/cities` will be loaded on demand, this takes place when the _Cities_ button is clicked. Let's see this in action, click on the _Cities_ button and pay attention to how the _lazy route_ is updated when the feature Angular module is loaded.
+Take a look at the bottom of the router tree, you will notice `cities [Lazy]`, this is a lazy loaded route. This means that the child components for the path `/cities` will be loaded on demand, this takes place when the _Cities_ button is clicked. Let us see this in action, click on the _Cities_ button and pay attention to how the _lazy route_ is updated when the feature Angular module is loaded.
 
 ![Image Lazy routes](images/routes-lazy.gif)
 
