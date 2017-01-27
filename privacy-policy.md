@@ -89,6 +89,7 @@ When a Rangle product collects a user's age, it will either block users under 13
 Once parental consent is granted, the child's data treated like any other user. Parents can change or revoke the consent choices previously made, and review, edit or request the deletion of their children's personal data.
 
 ## Changes to this privacy statement
+
 We will update this privacy statement when necessary to reflect customer feedback and changes in our products. When we post changes to this statement, we will revise the "last updated" date at the top of the statement and describe the changes in the Change Log section of this privacy statement. If there are material changes to the statement or in how Rangle will use your personal data, we will notify you either by prominently posting a notice of such changes before they take effect or by directly sending you a notification. We encourage you to periodically review this privacy statement to learn how Rangle is protecting your information.
 
 ## Change log
