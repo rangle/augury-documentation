@@ -1,4 +1,4 @@
-![Image Module App](images/app-module-demo.png)
+<img src="images/app-module-demo.png" style="width: 90%" alt="App Module Demo" />
 
 [Launch Demo App](https://augury.angular.io/examples/modules/app)
 
@@ -10,7 +10,7 @@ We will use a simple Angular application, _Song List_ to examine how to use Augu
 
 The _Song List_ application is composed of two modules. One, the root application module which is used to bootstrap and launch the application. The second is a single feature module that contains the components, services and pipes relevant for the searching and displaying of song data. Lets take a look at how this is organized:
 
-![Module Breakdown](images/module-breakdown.png)
+<img src="images/module-breakdown.png" style="width: 90%" alt="Module Breakdown" />
 
 The Songs Module is a _feature_ module, which exports a component, `SongsComponent` that can be used throughtout the application. This is used in the `AppComponent`, which is our _root_ component that will bootstrap the application.
 
@@ -30,7 +30,7 @@ When the DevTools panel opens, select the **Augury** tab located on the far righ
 
 ## Root Module
 
-![Module List AppModule](images/module-list-1.png)
+<img src="images/module-list-1.png" style="width: 90%" alt="Module List AppModule" />
 
 The _Module List_ feature lists all the modules in the application. The first module in this list is the `AppModule`. Here we can see what _imports_, _exports_, _providers_, _declarations_, and _providers in declarations_ are found in the module. Our `AppModule` imports the `BrowserModule` (used for bootstrapping), `HttpModule` (used for performin network requests) and our feature module, `SongsModule`. Since the `AppModule` contains the applications root component it doesn't need to export anything. The `AppModule` has a single Provider, `LoggerService` which is a simple service used for logging messages. Finally, the `AppModule` has one component, `AppComponent` which is the root component of our application and as such is the bootstrap entry point. 
 
@@ -60,7 +60,6 @@ import { SongsModule } from './modules/songs.module';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
 ```
 
 As you can see, the information that Augury has picked out and displayed in the _Module List_ comes directly from the `NgModule` definition. 
@@ -77,7 +76,7 @@ So now that we've taken a look at the root module of our application, let us con
 
 Angular comes with a bunch of essential modules that we use for creating forms, making HTTP requests, and specifying what environment our application should run under. In the root module we imported the _BrowserModule_ and _HttpModule_. 
 
-![Module List 2](images/module-list-2.png)
+<img src="images/module-list-2.png" style="width: 90%" alt="Module List 2" />
 
 Since library modules are static, there really isn't much in the way of useful information here, particularly for this application. However there may come a time where you need to debug a certain library module and given the complexity and size of such modules getting a breakdown of its `providers`, `exports` and `declarations` may come in handy. 
 
@@ -85,7 +84,7 @@ Since library modules are static, there really isn't much in the way of useful i
 
 Finally, lets take a look at our feature module, `SongsModule`. 
 
-![Songs Module](images/module-list-3.png)
+<img src="images/module-list-3.png" style="width: 90%" alt="Module List 3" />
 
 As we can see, the `SongsModule` uses three library modules. `FormsModule` and `ReactiveFormsModule` are used for building the search form, and `CommonModule` contains many of the common directives used in the applications templates. 
 
@@ -175,6 +174,6 @@ export class SongsComponent { ...
 
 Augury has picked up what we've done and has noticed that the `SongService` is not longer a provider from the module level, but instead from the component level. As we can see below, `SongService` is now under the _ProvidersInDeclarations_ section. 
 
-![Module List 4](images/module-list-4.png)
+<img src="images/module-list-4.png" style="width: 90%" alt="Module List 4" />
 
 This comes in handy as Auguary is able to pick up and list all services that a module provides, whether or not they are included in the module providers, or via specific component providers. 
