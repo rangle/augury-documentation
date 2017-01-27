@@ -19,7 +19,7 @@ This privacy statement explains what data we collect from you and how we use it.
 1. [Cookies and similar technologies](#cookie-and-similar-technologies)
 1. [Security of personal data](#security-of-personal-data)
 1. [Where we store and process personal data](#where-we-store-and-process-personal-data)
-1. [Our retention of personal data](#our-retention-of-personal-data)
+1. [Our retention of personal data](#out-retention-of-personal-data)
 1. [Collection of data from children](#collection-of-data-from-children)
 1. [Changes to this privacy statement](#changes-to-this-privacy-statement)
 1. [Change log](#change-log)
