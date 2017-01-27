@@ -13,12 +13,13 @@ This privacy statement explains what data we collect from you and how we use it.
 ### Table of contents
 
 1. [Data we collect](#data-we-collect)
+1. [Usage data](#usage-data)
 1. [How we use data](#how-we-use-data)
 1. [Reasons we share personal data](#reasons-we-share-personal-data)
-1. [Cookies & similar technologies](#cookie-&-similar-technologies)
+1. [Cookies and similar technologies](#cookie-and-similar-technologies)
 1. [Security of personal data](#security-of-personal-data)
 1. [Where we store and process personal data](#where-we-store-and-process-personal-data)
-1. [Our retention of personal data](#out-retention-of-personal-data)
+1. [Our retention of personal data](#our-retention-of-personal-data)
 1. [Collection of data from children](#collection-of-data-from-children)
 1. [Changes to this privacy statement](#changes-to-this-privacy-statement)
 1. [Change log](#change-log)
@@ -65,7 +66,7 @@ In addition, we will access, transfer, disclose, and preserve personal data when
 
 Finally, if Rangle, or substantially all of its assets, were acquired, or in the unlikely event that Rangle goes out of business or enters bankruptcy, user information would be one of the assets that is transferred or acquired by a third party. You acknowledge that such transfers may occur, and that any acquirer of Rangle may continue to use your personal information as set forth in this policy.
 
-## Cookies & similar Technologies
+## Cookies and similar Technologies
 
 Our products may use cookies, web beacons and similar technologies. Web beacons and cookies could be from Rangle or third-party service providers.
 
