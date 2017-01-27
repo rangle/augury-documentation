@@ -1,6 +1,6 @@
 ![Image Empty Form](images/form-empty.png)
 
-[Launch Demo App](https://augury.angular.io/examples/form-new-user/app/)
+[Launch Demo Application](https://augury.angular.io/examples/form-new-user/app/)
 
 ## Description
 
@@ -37,6 +37,7 @@ The Angular application makes use of _RxJS_ to create a data _stream_ to publish
 The HTML Form is provided by _component_ `FormNewUserComponent`. The table view of the user info is handled by `UserInfoComponent`. It simply subscribes to the _Subject_ publishing the user data.
 
 ## Opening Augury
+
 To use Augury, we must open DevTools first with the following keyboard shortcut.
 
 ```

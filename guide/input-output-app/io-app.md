@@ -1,6 +1,6 @@
 <img src="images/io-app.png" style="width: 100%">
 
-[Launch Demo App](https://augury.angular.io/examples/input-output/app/)
+[Launch Demo Application](https://augury.angular.io/examples/input-output/app/)
 
 ## Description
 The _Input Output Angular_ application demonstrates passing data inside a component as well as across components. The application makes uses of Angular input and output decorators as well as event and data binding.
@@ -28,13 +28,14 @@ Component | Description
 `ToggleComponent` | Toggle button with state lights.
 
 ## Opening Augury
+
 To use Augury, we need to open DevTools.
 
 ```
 Ctrl + Shift + I (Cmd + Opt + I on Mac)
 ```
 
-When DevTools is open, we select the _Augury_ tab, located on the far right.
+When DevTools opens, select the _Augury_ tab located on the far right.
 
 ## Component View
 
