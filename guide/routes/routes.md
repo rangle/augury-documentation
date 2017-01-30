@@ -61,7 +61,7 @@ When DevTools opens, select the _Augury_ tab located on the far right.
 
 ## Router outlet
 
-With Augury opened, in the _Component Tree_ `AppComponent` shows `router-outlet` as a child element, this make sense since it is declared in the _template_.
+With Augury opened, in the _Component Tree_ `AppComponent` shows `router-outlet` as a child element, this makes sense since it is declared in the _template_.
 
 ![Image Component Tree](images/routes-ct.png)
 
