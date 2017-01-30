@@ -128,7 +128,7 @@ Further reading material of the [Injector Dependency Tree](https://angular.io/do
 
 ### Understanding The Graph
 
-Let us look at how to read the _Injector_ graph. At the top we have the _Root injector_, which is typically found in the `NgModule` at the root of the application.
+Let us look at how to read the _Injector_ graph. At the top we have the _Root injector_, which is found in the `NgModule` at the root of the application.
 
 In the code, looking at file `app.module.ts` we see 3 _components_ being declared by the root module as well as the one _service_ `NewUserService` that is registered with the _Root injector_.
 
