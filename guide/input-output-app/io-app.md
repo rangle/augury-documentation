@@ -148,4 +148,4 @@ If we want to convince ourselves that an event is triggered, we can set a breakp
 
 <img src="images/debugging-with-notes.png" style="width: 100%">
 
-This concludes our journey of looking at the IO App with Augury. You should now feel more comfortable debugging input, output, property bindings and events in an Angular app.
+This concludes our journey of looking at the IO application with Augury. You should now feel more comfortable debugging input, output, property bindings and events in an Angular app.
