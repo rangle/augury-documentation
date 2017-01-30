@@ -30,7 +30,7 @@ The _New User Form_ application is composed of 3 _components_ and 1 _service_.
 
 ## Architecture
 
-The Angular application makes use of _RxJS_ to create a data _stream_ to publish the _user_ data. When the _Create_ button is clicked, the user data is sent to the _service_ using an API call. The _service_ then publishes the data using a _RxJS Subject_.
+The Angular application makes use of _RxJS_ to create a data _stream_ to publish the _user_ data. When the _Create_ button is clicked, the user data is sent to the _service_ using an API call. The _service_ then publishes the data using an _RxJS Subject_.
 
 ![Image App UML](images/app-uml.png)
 
