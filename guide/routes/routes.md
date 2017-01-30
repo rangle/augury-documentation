@@ -75,7 +75,7 @@ Try clicking on each of the links labeled:
 * Path 2
 * Park 3
 
-Notice how each child component is loaded under `ParksComponent` just underneath `router-outlet`. This is how Angular inserts a component into the DOM, as a sibliing element of `router-outlet`.
+Notice how each child component is loaded under `ParksComponent` just underneath `router-outlet`. This is how Angular inserts a component into the DOM, as a sibling element of `router-outlet`.
 
 ## Routes
 
