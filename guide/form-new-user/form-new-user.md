@@ -30,7 +30,7 @@ The _New User Form_ application is composed of 3 _components_ and 1 _service_.
 
 ## Architecture
 
-The Angular application makes use of _RxJS_ to create a data _stream_ to publish the _user_ data. When the _Create_ button is clicked, the user data is sent to the _service_ using a API call. The _service_ then publishes the data using a _RxJS Subject_.
+The Angular application makes use of _RxJS_ to create a data _stream_ to publish the _user_ data. When the _Create_ button is clicked, the user data is sent to the _service_ using an API call. The _service_ then publishes the data using a _RxJS Subject_.
 
 ![Image App UML](images/app-uml.png)
 
@@ -56,7 +56,7 @@ The default view setting, called the _Hybrid view_, can be changed from the sett
 
 Augury shows that the _New User Form_ Angular application has 3 components. The _Root_ component is called `AppComponent` which in turn contains 2 child components, `UserInfoComponent` and `FormNewUserComponent`.
 
-Select `AppComponent` from the _Component Tree_, on the right side in the _Properties_ tab, we see the single property `title` under _State_. Augury allows the value of property `title` to be modified. This is indicated by displaying a edit field with a dashed blue line on the bottom.
+Select `AppComponent` from the _Component Tree_, on the right side in the _Properties_ tab, we see the single property `title` under _State_. Augury allows the value of property `title` to be modified. This is indicated by displaying an edit field with a dashed blue line on the bottom.
 
 ![Image App Title Property](images/app-title.png)
 
@@ -78,7 +78,7 @@ To return to Augury, click on the Augury tab.
 
 ## Dependency
 
-Let us take a look at the `UserInfoComponent`, select it from the _Component Tree_. In the _Properties_ tab, we see under _State_, the component has only one property `newUserService` and one dependency to `NewUserService`.
+Let us take a look at the `UserInfoComponent`, select it from the _Component Tree_. In the _Properties_ tab, we see that under _State_, the component has only one property `newUserService` and one dependency to `NewUserService`.
 
 ![Image User Info Component](images/user-info-component.png)
 
@@ -98,7 +98,7 @@ export class UserInfoComponent {
 }
 ```
 
-Since property `userInfo` is not assigned a value, TypeScript removes it during compile, this is why the property is not seen in the _Properties_ tab. Likewise `newUserService` is assigned a value (reference to service) by the _Injector_ using Angular's Dependency Injection (DI).
+Since property `userInfo` is not assigned a value, TypeScript removes it during compile, this is why the property is not seen in the _Properties_ tab. Likewise `newUserService` is assigned a value (a reference to the service) by the _Injector_ using Angular's Dependency Injection (DI).
 
 Let us _publish_ a hand crafted user info using Augury. In the _Properties_ tab, under _State_ expand property `newUserService` as shown below so the _Emit_ button is visible.
 
@@ -128,7 +128,7 @@ Further reading material of the [Injector Dependency Tree](https://angular.io/do
 
 ### Understanding The Graph
 
-Let us look at how to read the _Injector_ graph. At the top we have the _Root injector_, conceptually this is what will be found in application `NgModule`, the root module.
+Let us look at how to read the _Injector_ graph. At the top we have the _Root injector_, which is typically found in the `NgModule` at the root of the application.
 
 In the code, looking at file `app.module.ts` we see 3 _components_ being declared by the root module as well as the one _service_ `NewUserService` that is registered with the _Root injector_.
 
@@ -170,11 +170,11 @@ export class AppComponent {
 
 Looking next at `UserInfoComponent`, we see a red line extending to the right, connecting to a circle labeled `NewUserService`. This denotes that _service_ `NewUserService` is being injected into _component_ `UserInfoComponent`.
 
-The dashed blue line from the _Root injector_ to `NewUserService` indicates this _service_ is provided by the _Root injector_. This identifies the _service_ as being a _singleton_ (global shared instance), that is available throughout the entire application.
+The dashed blue line from the _Root injector_ to `NewUserService` indicates this _service_ is provided by the _Root injector_. This identifies the _service_ as being a _singleton_ (a global shared instance), that is available throughout the entire application.
 
 ### Colours
 
-Pay close attentions to the colours of the _components_ and _service_. The circle is hollow for _service_, this means the _service_ is not provided by the _component_, it is being provided from an ancestor in the dependency tree.
+Pay close attention to the colours of the _components_ and _service_. For example, the circle is hollow for _service_. This means the _service_ is not provided by the _component_, instead it is being provided from an ancestor in the dependency tree.
 
 ### Parent Level Injector
 
@@ -197,7 +197,7 @@ The only thing that has changed is the dashed blue line, coming from `AppCompone
 
 ### Component Level Injector
 
-A _service_ can also be injected at the _component_ level. To see how this would look from the _Injector Graph_, we can make a simple code alteration to class `UserInfoComponent` in the file `user-info.component.ts`.
+A _service_ can also be injected at the _component_ level. To see how this would look from the _Injector Graph_, we can make a simple code alteration to `UserInfoComponent` in the file `user-info.component.ts`.
 
 In the `@Component` decorator, include the `providers` array like this:
 
