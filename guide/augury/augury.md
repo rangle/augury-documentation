@@ -4,7 +4,7 @@ In this section you will learn about what Augury is and the features that are av
 
 Augury is an application inspection tool for Angular that runs in the Web browser. It runs as a Chrome browser _extension_ for the Developer Tools (DevTools) panel, aiding in analysis and debugging during development.
 
-The tool provides insight into the application structure for an Angular application and the relationships between these building blocks:
+Augury provides insight into the application structure for an Angular application and the relationship between these building blocks:
 
 * Components
 * Services
@@ -20,7 +20,7 @@ Augury compliments DevTools during a debugging session, making it easy to modify
 
 ## Installing Augury
 
-The best way to install Augury is from the [chrome web store](https://chrome.google.com/webstore/category/extensions?hl=en). Select _Extensions_ from the side panel, type "Augury" into the search field, and then press <kbd>Enter</kbd>.
+The best way to install Augury is from the [chrome web store](https://chrome.google.com/webstore/category/extensions?hl=en). Select _Extensions_ from the side panel, type "Augury" into the search field, and then press `Enter`.
 
 ![Image Chrome Web store](images/chrome-web-store.png)
 
@@ -32,24 +32,22 @@ When you click on "Add To Chrome", a _popup_ will open. Select "Add extension" t
 
 ![Image Extension logo](images/extension-logo.png)
 
-The Augury icon provides additional information. Click on the icon now to see what is available.
+The Augury icon provides additional information. Click on the icon now to discover what that is.
 
 ## Using Augury
 
-To start using Augury, you must have an Angular application running in the browser. If you have never debugged a JavaScript application before, you may not be aware of the debugging environment that most modern browsers provide.
+To start using Augury, you must have an Angular application running in the browser for inspection. If you have never debugged a JavaScript application, you may not be aware that each modern Web browser provides a debug environment straight in the browser. _DevTools_, the debug environment is opened using the following _shortcut_:
 
-_DevTools_, the debug environment, is opened using the following _shortcut_:
-
-* For Windows and Linux, use <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>
-* For Mac OS X, use <kbd>Cmd</kbd> + <kbd>Opt</kbd> + <kbd>I</kbd>
+* For Windows and Linux, use `Ctrl + Shift + I`
+* For Mac OS X, use `Cmd + Opt + I`
 
 When DevTools is opened, you will find the Augury tab on the far right.
 
 ![Image DevTools](images/devtools.png)
 
-## Augury Features
+## Augury features
 
-We will quickly go through the main functionality available in Augury. This will allow you to become familiar with the features so you can locate them when needed.
+We will walk quickly through the main functionality that is available in Augury. This is to become familiar with the features and how to locate them when needed.
 
 The first view that is visible is the _Component Tree_ which shows **loaded** components belonging to the application.
 
@@ -57,24 +55,22 @@ The first view that is visible is the _Component Tree_ which shows **loaded** co
 
 The component tree displays a hierarchical relationship of the _components_. When a _component_ is selected, Augury presents additional information about the selected _component_ in the _Properties_ tab.
 
-<!-- instead of using HTML here, the global
-  CSS should use `max-width: 100%` for all img tags -->
 <img src="images/properties.png" style="width: 100%">
 
 Notable items of interest are:
 
-1. **View Source** — a link to the source code of the component.
-1. **Change Detection** — displays whether or not Change Detection is in use for the component.
-1. **Object Properties** — lists the properties of the component.
-1. **Dependencies** - lists the dependencies of the component.
+1. View Source — a link to the source code of the component.
+1. Change Detection — displays whether or not Change Detection is in use for the component.
+1. Object Properties — lists the properties of the component.
+1. Dependencies - lists the dependencies of the component.
 
 To view the source code of the selected _component_, click the 'View Source' link. This will bring the _Sources_ tab into focus and display the source code.
 
-### Source Map
+### Source map
 
-One thing to keep in mind is that the _TypeScript_ code will only be shown if a _source map_ file exists. In production, if no _source map_ is found, what you will see instead is the compiled JavaScript code, which may also be minified and difficult to read.
+One thing to keep in mind, the _TypeScript_ code will only be shown if a _source map_ file exists. In production, if no _source map_ is found, what you will see is the compiled JavaScript code, which may also be minified and difficult to read.
 
-Next to the _Properties_ tab is the _Injector Graph_, clicking on it will display the dependency relationships of _components_ and _services_.
+Next to the _Properties_ tab is the _Injector Graph_, clicking on it will display the dependency of _components_ and _services_.
 
 ![Image Injector graph](images/injector-graph.png)
 
