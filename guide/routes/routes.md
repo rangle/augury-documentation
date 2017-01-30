@@ -1,6 +1,6 @@
 ![Image NYC Metro](images/routes-nyc.png)
 
-[Launch Demo Application](https://augury.angular.io/examples/routes/app/)
+<a href="https://augury.angular.io/examples/routes/app/" target="blank">Launch Demo Application</a>
 
 ## Description
 
