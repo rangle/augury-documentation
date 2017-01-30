@@ -65,7 +65,7 @@ With Augury opened, in the _Component Tree_ `AppComponent` shows `router-outlet`
 
 ![Image Component Tree](images/routes-ct.png)
 
-In the browser, click on the _Parks_ button. This will load the `ParksComponent` and update _Component Tree_ view. You will notice a second `router-outlet` that appears under `ParksComponent`, this is where each of the park components will load into.
+In the browser, click on the _Parks_ button. This will load the `ParksComponent` and update the _Component Tree_ view. You will notice a second `router-outlet` that appears under `ParksComponent`, this is where each of the park components will load into.
 
 ![Images Routes Parks](images/routes-parks.png)
 
