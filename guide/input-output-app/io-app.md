@@ -1,6 +1,6 @@
 <img src="images/io-app.png" style="width: 100%">
 
-[Launch Demo Application](https://augury.angular.io/examples/input-output/app/)
+<a href="https://augury.angular.io/examples/input-output/app/" target="blank">Launch Demo Application</a>
 
 ## Description
 The _Input Output Angular_ application demonstrates passing data inside a component as well as across components. The application makes uses of Angular input and output decorators as well as event and data binding.
