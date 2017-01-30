@@ -20,7 +20,7 @@ Augury compliments DevTools during a debugging session, making it easy to modify
 
 ## Installing Augury
 
-The best way to install Augury is from the [chrome web store](https://chrome.google.com/webstore/category/extensions?hl=en). Select _Extensions_ from the side panel, type "Augury" into the search field, and then press `Enter`.
+The best way to install Augury is from the [chrome web store](https://chrome.google.com/webstore/category/extensions?hl=en). Select _Extensions_ from the side panel, type "Augury" into the search field, and then press _Enter_.
 
 ![Image Chrome Web store](images/chrome-web-store.png)
 
@@ -47,7 +47,7 @@ When DevTools is opened, you will find the Augury tab on the far right.
 
 ## Augury features
 
-We will walk quickly through the main functionality that is available in Augury. This is to become familiar with the features and how to locate them when needed.
+We will quickly go over the main functionality that is available in Augury. This is to become familiar with the features and how to locate them when needed.
 
 The first view that is visible is the _Component Tree_ which shows **loaded** components belonging to the application.
 
