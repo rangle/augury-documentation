@@ -1,6 +1,6 @@
 ![Image NYC Metro](images/routes-nyc.png)
 
-[Launch Demo Application](https://augury.angular.io/examples/routes/app/)
+<a href="https://augury.angular.io/examples/routes/app/" target="blank">Launch Demo Application</a>
 
 ## Description
 
@@ -61,11 +61,11 @@ When DevTools opens, select the _Augury_ tab located on the far right.
 
 ## Router outlet
 
-With Augury opened, in the _Component Tree_ `AppComponent` shows `router-outlet` as a child element, this make sense since it is declared in the _template_.
+With Augury opened, in the _Component Tree_ `AppComponent` shows `router-outlet` as a child element, this makes sense since it is declared in the _template_.
 
 ![Image Component Tree](images/routes-ct.png)
 
-In the browser, click on the _Parks_ button. This will load the `ParksComponent` and update _Component Tree_ view. You will notice a second `router-outlet` that appears under `ParksComponent`, this is where each of the park components will load into.
+In the browser, click on the _Parks_ button. This will load the `ParksComponent` and update the _Component Tree_ view. You will notice a second `router-outlet` that appears under `ParksComponent`, this is where each of the park components will load into.
 
 ![Images Routes Parks](images/routes-parks.png)
 
@@ -75,7 +75,7 @@ Try clicking on each of the links labeled:
 * Path 2
 * Park 3
 
-Notice how each child component is loaded under `ParksComponent` just underneath `router-outlet`. This is how Angular inserts a component into the DOM, as a sibliing element of `router-outlet`.
+Notice how each child component is loaded under `ParksComponent` just underneath `router-outlet`. This is how Angular inserts a component into the DOM, as a sibling element of `router-outlet`.
 
 ## Routes
 
