@@ -26,7 +26,7 @@ To use Augury, lets open up DevTools with the following shortcut:
 Ctrl + Shift + I (Cmd + Opt + I on Mac)
 ```
 
-When the DevTools panel opens, select the **Augury** tab located on the far right. By default the _Component Tree_ tab will be open. To the far right, there will be a tab labeled _NgModules_. This is the section we want so click on it to open it up!
+When the DevTools panel opens, select the Augury tab located on the far right. By default the _Component Tree_ tab will be open. To the far right, there will be a tab labeled _NgModules_. This is the section we want so click on it to open it up!
 
 ## Root Module
 
@@ -92,7 +92,7 @@ Feature modules can be thought of as extending the functionality of an applicati
 
 The `SongsModule` also uses the `SongService` as seen under the provider section.
 
-Let's take a look at the definition of the Song Module, open up `src/app/modules/songs.module.ts`:
+Let us take a look at the definition of the Song Module, open up `src/app/modules/songs.module.ts`:
 
 ```js
 import {NgModule} from '@angular/core';
@@ -147,7 +147,7 @@ export class SongListComponent {
 
 The `SongListComponent` uses the `Logger` service via dependency injection that has been made available from the `AppModule`. Since the `AppModule` is at the root of the application's dependency injection hierarchy, the `SongListComponent` can use any of its providers. However, since the `Logger service` is defined in the `AppModule`, Augury will list this service under the providers section of the `AppModule`. It is not included in the section of the `SongsModule`, even though the `SongsModule` uses this service. To get a better sense of dependency injection throughout our application we should use Augury's Dependency Injection Tree.
 
-Let's see what happens when we remove the `SongService` from the provider list in the `SongModule` definition and move it to the provider list in the `SongsComponent` component definition. Here is what `SongsComponent` will look like:
+Let us see what happens when we remove the `SongService` from the provider list in the `SongModule` definition and move it to the provider list in the `SongsComponent` component definition. Here is what `SongsComponent` will look like:
 
 ```js
 @Component({
@@ -172,7 +172,7 @@ Let's see what happens when we remove the `SongService` from the provider list i
 export class SongsComponent { ...
 ```
 
-Augury has picked up on what we've done and has noticed that the `SongService` is no longer a provider from the module level, but instead from the component level. As we can see below, `SongService` is now under the _ProvidersInDeclarations_ section.
+Augury has picked up what we've done and has noticed that the `SongService` is no longer a provider from the module level, but instead from the component level. As we can see below, `SongService` is now under the _ProvidersInDeclarations_ section.
 
 <img src="images/module-list-4.png" style="width: 90%" alt="Module List 4" />
 
