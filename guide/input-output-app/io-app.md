@@ -37,7 +37,7 @@ Ctrl + Shift + I (Cmd + Opt + I on Mac)
 
 When DevTools opens, select the _Augury_ tab located on the far right.
 
-## Component View
+## Component view
 
 Once Augury is opened, the component view is presented in the _Component Tree_. It shows all the available components in the application, along with their parent-child relationship. Below we see the list of components discussed in the architecture section earlier.
 
@@ -112,7 +112,7 @@ In our example IO application, we have intentionally declared a property count w
 
 However if we click on one of the counter buttons, this will initialize the count property with a value.
 
-## Editing Properties
+## Editing properties
 
 In the _Properties_ tab, under _State_, an editable property will be displayed with a dashed underline. Let us change the `title` property of `AppComponent`.
 
@@ -122,7 +122,7 @@ In the _Properties_ tab, under _State_, an editable property will be displayed w
 
 <img src="images/editing-title-app.png">
 
-## Firing Events
+## Firing events
 
 The IO application has two components that emit an event. The `CounterComponent` and `MessageEntryComponent` have a event property decorated with `@Output()`, which has an `EventEmitter` attached to it.
 
@@ -132,7 +132,7 @@ We will look at `MessageEntryComponent`, start by selecting the component. In th
 
 You will notice in the IO app, under _Message Board_ the new message is displayed. By clicking on the _Emit_ button, an event was fired, in particular an event called `messageEvent`.
 
-## Viewing Source Code
+## Viewing source code
 
 Augury provides a quick and convenient way to jump to the source code of a selected component. To do this, click on the _View Source_ link, it is located in the _Properties_ tab.
 
