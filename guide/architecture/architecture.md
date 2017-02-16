@@ -91,7 +91,7 @@ send(MessageFactory.initialize()).then(() => injectScript('build/ng-validate.js'
 
 #### Angular Validation
 
-The code in `ng-validate.ts` essentially verifies that Angular 2 is running. There can be multiple Angular 2 applications on the same page, but there must be at least one under to use Augury.
+The code in `ng-validate.ts` essentially verifies that Angular 2 is running. There can be multiple Angular 2 applications on the same page, but there must be at least one in-order to use Augury.
 
 If the validator detects that Angular 2 is running, it will post a
 `MessageType.FrameworkLoaded` message to the browser event queue. If you go
@@ -317,7 +317,7 @@ In fact it will have no prototype chain at all. The only exception to this rule 
 
 ## Data structures
 
-The primary data structures that Augury traffic's in are the types `MutableTree` and `Node`. (`MutableTree` contains `Node`s.) This is our own internal representation of component metadata, and it is what powers the _Component Tree_ view in the Augury UI.
+The primary data structures that Augury works with are the types `MutableTree` and `Node`. (`MutableTree` contains `Node`s.) This is our own internal representation of component metadata, and it is what powers the _Component Tree_ view in the Augury UI.
 
 Each node has an ID property (`id`) that looks like this:
 
