@@ -23,13 +23,13 @@
 
 Augury is a Chrome _DevTools_ extension that is primarily separated into two separate concerns: _backend_ and _frontend_.
 
-The backend is responsible for querying data from Angular 2, updating component state when the User does so from the Augury UI. Augury allows event generation from an `EventEmitter` or RxJS `Subject`. Generally speaking, the backend deals in data.
+The backend is responsible for parsing data from Angular 2 and updating component state when the User does so from the Augury UI. Augury allows event generation from an `EventEmitter` or RxJS `Subject`. Generally speaking, the backend deals in data.
 
-The _frontend_ is the UI of Augury itself, it is a tab that is desplayed in the _DevTools_.
+The _frontend_ is the UI of Augury itself, it is a tab that is displayed in the _DevTools_.
 
 ### Execution contexts
 
-Augury is divided into several execution contexts. It is important to note that these contexts do not have direct access to each other and therefore cannot read or write each other's in-memory state. Communication between contexts must happen using Chrome's [extension message-passing system](https://developer.chrome.com/extensions/messaging).
+Augury is divided into several execution contexts. It is important to note that these contexts do not have direct access to each other and therefore cannot read or write each others in-memory state. Communication between contexts must happen using Chrome's [extension message-passing system](https://developer.chrome.com/extensions/messaging).
 
 This communication can take several forms which are covered in more detail in [Communication](#communication).
 
@@ -46,7 +46,7 @@ A background script (`channel.ts`) is always running in the _background_ in its 
 It's likely that it would be possible to transmit messages directly between these two contexts, but it is helpful to have a channel that is (almost) guaranteed to always exist so that we can reduce the complexity of the code
 that establishes communication connections (in both the frontend and backend).
 
-The messages that is sent using the background script channel are small and contain no actual application data. So we do not have to worry about performance or serialization.
+The messages sent using the background script channel are serialized, they are small and contain no actual application data. As a result they have little impact on the performance of Augury.
 
 _Note_: Messages are stored in memory in the background execution context until they can be delivered to their target.
 
@@ -91,7 +91,7 @@ send(MessageFactory.initialize()).then(() => injectScript('build/ng-validate.js'
 
 #### Angular Validation
 
-The code in `ng-validate.ts` essentially verifies that Angular 2 is running. There can be multiple Angular 2 applications on the same page, but there must be at least one inorder to use Augury.
+The code in `ng-validate.ts` essentially verifies that Angular 2 is running. There can be multiple Angular 2 applications on the same page, but there must be at least one in-order to use Augury.
 
 If the validator detects that Angular 2 is running, it will post a
 `MessageType.FrameworkLoaded` message to the browser event queue. If you go
@@ -193,11 +193,11 @@ const {tree} = createTreeFromElements(roots, treeRenderOptions);
 
 This is a rough Augury equivalent of what you would get if you executed this piece of code inside your debugger Console tab:
 
-```javascript
+```js
 getAllAngularRootElements().map(root => ng.probe(root))
 ```
 
-The crucial difference is that our tree is a readonly representation of the tree at a particular moment in time, whereas the tree produced by `ng.probe()` is a _living_ tree that changes over time (as the application itself changes).
+The crucial difference is that our tree is a read-only representation of the tree at a particular moment in time, whereas the tree produced by `ng.probe()` is a _living_ tree that changes over time (as the application itself changes).
 
 Having a representation of the component tree at a particular moment in time allows us to perform _difference comparisons_ of two trees from two different moments. This allows us to send a far smaller data set than if we had to send the entire tree each time the application updates (how Augury used to work).
 
@@ -233,7 +233,7 @@ If you navigate back to `backend.ts`, you will notice this piece of code toward 
 
 ```typescript
 /// For large messages, we do not send them through the normal pipe (which
-/// is backend > content script > backround channel > frontend), we add them
+/// is backend > content script > background channel > frontend), we add them
 /// to this buffer and then send a {@link MessageType.Push} message that
 /// tells the frontend to read messages directly from this queue itself.
 /// This allows us to prevent very large messages containing tree data from
@@ -317,7 +317,7 @@ In fact it will have no prototype chain at all. The only exception to this rule 
 
 ## Data structures
 
-The primary data structures that Augury trafficks in are the types `MutableTree` and `Node`. (`MutableTree` contains `Node`s.) This is our own internal representation of component metadata, and it is what powers the _Component Tree_ view in the Augury UI.
+The primary data structures that Augury works with are the types `MutableTree` and `Node`. (`MutableTree` contains `Node`s.) This is our own internal representation of component metadata, and it is what powers the _Component Tree_ view in the Augury UI.
 
 Each node has an ID property (`id`) that looks like this:
 
