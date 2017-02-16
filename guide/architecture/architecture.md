@@ -43,7 +43,7 @@ The background script is the first thing to start.
 
 A background script (`channel.ts`) is always running in the _background_ in its own context. Augury uses a background script (`channel.ts`) to transmit small messages between the [backend](#backend) and [frontend](#frontend) execution contexts.
 
-It's likely that it would be possible to transmit messages directly between these two contexts, but it is helpful to have a channel that is (almost) guaranteed to always exist so that we can reduce the complexity of the code
+It is likely that it would be possible to transmit messages directly between these two contexts, but it is helpful to have a channel that is (almost) guaranteed to always exist so that we can reduce the complexity of the code
 that establishes communication connections (in both the frontend and backend).
 
 The messages sent using the background script channel are serialized, they are small and contain no actual application data. As a result they have little impact on the performance of Augury.
@@ -83,7 +83,7 @@ const injectScript = (path: string) => {
 
 #### Initialization
 
-Further down in `content-script.ts`, you'll see a send call, it fires a _initialization_ message to the background script to start the _bootstrapping_ process.
+Further down in `content-script.ts`, you will see a send call, it fires a _initialization_ message to the background script to start the _bootstrapping_ process.
 
 ```typescript
 send(MessageFactory.initialize()).then(() => injectScript('build/ng-validate.js'));
@@ -346,7 +346,7 @@ const propertyPath = ['myProperty', 'subKey', 'foobar'];
 
 So we search for the node first, then once found, we search inside of its `componentInstance` value and find the `foobar` property. (To see this in action, check out `NodeItem` and `ComponentPropertyState`.)
 
-# Frontend architecture
+# Frontend Architecture
 
 The frontend is much simpler than the backend. In essence, it is not dissimilar from any other Angular 2 application that you may come across. It contains plenty of `@Component()` classes and composes those together into a UI that the developer interacts with when debugging Angular 2 applications.
 
