@@ -1,12 +1,12 @@
 ![Image Empty Form](images/form-empty.png)
 
-[Launch Demo Application](https://augury.angular.io/examples/form-new-user/app/)
+[Launch Demo Application](https://augury.angular.io/examples/dependency-injection/app/)
 
 ## Description
 
-The _New User Form_ application exemplifies using a simple Angular _template_ based _Form_ that uses a data _service_ to hold the submitted data. The data _service_ provides a data _stream_ to publish updates. A view _component_ subscribes to the data _stream_ and displays the most recent submitted user data in table format.
+The _Dependency Injection_ application exemplifies using a simple Angular _template_ based _Form_ that uses a data _service_ to hold the submitted data. The data _service_ provides a data _stream_ to publish updates. A view _component_ subscribes to the data _stream_ and displays the most recent submitted user data in table format.
 
-To display the _user_ data table, enter values in the _Form_ and click on the _Create_ button.
+To display the _User_ data table, enter values in the _Form_ and click on the _Create_ button.
 
 ![Image User Data Entry](images/form-entry.png)
 
@@ -16,7 +16,7 @@ This will result in the data getting sent the _data service_ which then broadcas
 
 ## Application Structure
 
-The _New User Form_ application is composed of 3 _components_ and 1 _service_.
+The _Dependency Injection_ application is composed of 3 _components_ and 1 _service_.
 
 ### Components
 
@@ -54,7 +54,7 @@ The default view setting, called the _Hybrid view_, can be changed from the sett
 
 ## Component View
 
-Augury shows that the _New User Form_ Angular application has 3 components. The _Root_ component is called `AppComponent` which in turn contains 2 child components, `UserInfoComponent` and `FormNewUserComponent`.
+Augury shows that the _Dependency Injection_ Angular application has 3 components. The _Root_ component is called `AppComponent` which in turn contains 2 child components, `UserInfoComponent` and `FormNewUserComponent`.
 
 Select `AppComponent` from the _Component Tree_, on the right side in the _Properties_ tab, we see the single property `title` under _State_. Augury allows the value of property `title` to be modified. This is indicated by displaying an edit field with a dashed blue line on the bottom.
 
