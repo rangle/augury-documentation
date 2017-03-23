@@ -1,6 +1,6 @@
 ![Image Empty Form](images/form-empty.png)
 
-[Launch Demo Application](https://augury.angular.io/examples/dependency-injection/app/)
+<a href="https://augury.angular.io/examples/dependency-injection/app/" target="blank">Launch Demo Application</a>
 
 ## Description
 
