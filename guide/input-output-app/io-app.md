@@ -1,31 +1,32 @@
 <img src="images/io-app.png" style="width: 100%">
 
-<a href="https://augury.angular.io/examples/input-output/app/" target="blank">Launch Demo Application</a>
+<a href="/examples/input-output/app/index.html" target="blank">Launch Demo Application</a>
 
 ## Description
+
 The _Input Output Angular_ application demonstrates passing data inside a component as well as across components. The application makes uses of Angular input and output decorators as well as event and data binding.
 
 The IO Application is composed of 5 components that are:
 
 ### Components
 
-* Root Component
-* Jumbo Message Board
-* Message Entry
-* Counter
-* Toggle Button
+- Root Component
+- Jumbo Message Board
+- Message Entry
+- Counter
+- Toggle Button
 
 ## Architecture
 
 The IO application _root_ component is `AppComponent`, it houses the other 4 components that each have a specific behaviour.
 
-Component | Description
------|------------
-`AppComponent` | Root Component
-`MessageBoardComponent` | Large message board.
-`MessageEntryComponent` | Message entry form that emits a message.
-`CounterComponent` | A counter that emits a count value.
-`ToggleComponent` | Toggle button with state lights.
+| Component               | Description                              |
+| ----------------------- | ---------------------------------------- |
+| `AppComponent`          | Root Component                           |
+| `MessageBoardComponent` | Large message board.                     |
+| `MessageEntryComponent` | Message entry form that emits a message. |
+| `CounterComponent`      | A counter that emits a count value.      |
+| `ToggleComponent`       | Toggle button with state lights.         |
 
 ## Opening Augury
 
@@ -74,8 +75,8 @@ If we select `AppComponent` inside the _Component Tree_, to the left inside the 
 
 If you have looked through the example code for IO application, you will notice there is one property missing, that being the property `count`.
 
-
 **app.component.ts**
+
 ```js
 @Component({
   selector: 'app-root',
@@ -91,20 +92,22 @@ export class AppComponent {
   ...
 }
 ```
+
 Augury will not show properties in a component if it not assigned a value, since TypeScript will simply compile it out. It is therefore suggested you assign a default value to each property. Having a property with an `undefined` value is poor coding practice and is an anti-pattern.
 
-
 **Bad**
+
 ```js
 class Foo {
-   name: string;
+  name: string;
 }
 ```
 
 **Good**
+
 ```js
 class Foo {
-  name: string = "";
+  name: string = '';
 }
 ```
 
