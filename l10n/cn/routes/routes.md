@@ -1,6 +1,6 @@
 ![Image NYC Metro](images/routes-nyc.png)
 
-<a href="https://augury.angular.io/examples/routes/app/" target="blank">Launch Demo Application</a>
+<a href="/examples/routes/app/index.html" target="blank">Launch Demo Application</a>
 
 ## Description
 
@@ -8,19 +8,19 @@ The _Routes_ Angular application demonstrates the uses of _routes_ as well as la
 
 The application contains 10 components and 2 modules. The _root_ module `app.module.ts` contains the following components:
 
-* AppComponent
-* HomeComponent
-* ParksComponent
-* ParkOneComponent
-* ParkTwoComponent
-* ParkThreeComponent
+- AppComponent
+- HomeComponent
+- ParksComponent
+- ParkOneComponent
+- ParkTwoComponent
+- ParkThreeComponent
 
 The _city_ module `city.module.ts` contains:
 
-* CityComponent
-* CityOneComponent
-* CityTwoComponent
-* CityThreeComponent
+- CityComponent
+- CityOneComponent
+- CityTwoComponent
+- CityThreeComponent
 
 ## Architecture
 
@@ -30,24 +30,24 @@ The component code is simple, the `AppComponent` has a single router outlet. Whe
 
 The _root_ module `app.module.ts` provides routes for _root_ and _parks_, which are:
 
-Routes|Component (View)
-------|---------
-`/`|AppComponent
-`/home`|HomeComponent
-`/parks`|ParksComponent
-`/parks/park1`|ParkOneComponent
-`/parks/park2`|ParkTwoComponent
-`/parks/park3`|ParkThreeComponent
+| Routes         | Component (View)   |
+| -------------- | ------------------ |
+| `/`            | AppComponent       |
+| `/home`        | HomeComponent      |
+| `/parks`       | ParksComponent     |
+| `/parks/park1` | ParkOneComponent   |
+| `/parks/park2` | ParkTwoComponent   |
+| `/parks/park3` | ParkThreeComponent |
 
 The root path `/` gets redirected to `/home`. Also the lazy loaded route for `cities` is defined in the _root_ module.
 
 The city module `city.module.ts` contains the routes for _cities_ below:
 
-Routes|Component (View)
-------|---------
-`/cities/city1`|CityOneComponent
-`/cities/city2`|CityTwoComponent
-`/cities/city3`|CityThreeComponent
+| Routes          | Component (View)   |
+| --------------- | ------------------ |
+| `/cities/city1` | CityOneComponent   |
+| `/cities/city2` | CityTwoComponent   |
+| `/cities/city3` | CityThreeComponent |
 
 ## Opening Augury
 
@@ -71,9 +71,9 @@ In the browser, click on the _Parks_ button. This will load the `ParksComponent`
 
 Try clicking on each of the links labeled:
 
-* Park 1
-* Path 2
-* Park 3
+- Park 1
+- Path 2
+- Park 3
 
 Notice how each child component is loaded under `ParksComponent` just underneath `router-outlet`. This is how Angular inserts a component into the DOM, as a sibling element of `router-outlet`.
 

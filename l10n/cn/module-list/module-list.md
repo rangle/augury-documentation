@@ -1,6 +1,6 @@
 <img src="images/app-module-demo.png" style="width: 90%" alt="App Module Demo" />
 
-<a href="https://augury.angular.io/examples/modules/app" target="_blank">Launch Demo Application</a>
+<a href="/examples/modules/app/index.html" target="_blank">Launch Demo Application</a>
 
 ## Description
 
@@ -48,18 +48,12 @@ import { Logger } from './services/logger.service';
 import { SongsModule } from './modules/songs.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpModule,
-    SongsModule
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, HttpModule, SongsModule],
   providers: [Logger],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
 ```
 
 As you can see, the information that Augury has picked out and displayed in the _Module List_ comes directly from the `NgModule` definition.
@@ -95,33 +89,21 @@ The `SongsModule` also uses the `SongService` as seen under the provider section
 Let us take a look at the definition of the Song Module, open up `src/app/modules/songs.module.ts`:
 
 ```js
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import {SongPipe} from '../pipes/song.pipe';
-import {SongListComponent} from '../components/song-list/song-list.component';
-import {SongsComponent} from '../components/songs/songs.component';
+import { SongPipe } from '../pipes/song.pipe';
+import { SongListComponent } from '../components/song-list/song-list.component';
+import { SongsComponent } from '../components/songs/songs.component';
 
-import {SongService} from '../services/songs.service';
+import { SongService } from '../services/songs.service';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule
-  ],
-  declarations: [
-    SongListComponent,
-    SongsComponent,
-    SongPipe
-  ],
-  providers: [
-    SongService
-  ],
-  exports: [
-    SongsComponent
-  ]
+  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  declarations: [SongListComponent, SongsComponent, SongPipe],
+  providers: [SongService],
+  exports: [SongsComponent]
 })
 export class SongsModule {}
 ```

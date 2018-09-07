@@ -1,6 +1,6 @@
 ![Image Empty Form](images/form-empty.png)
 
-<a href="https://augury.angular.io/examples/dependency-injection/app/" target="blank">Launch Demo Application</a>
+<a href="/examples/dependency-injection/app/index.html" target="blank">Launch Demo Application</a>
 
 ## Description
 
@@ -26,7 +26,7 @@ The _Dependency Injection_ application is composed of 3 _components_ and 1 _serv
 
 ### Service
 
-* NewUserService
+- NewUserService
 
 ## Architecture
 
@@ -71,8 +71,8 @@ In the _Properties_ tab, next to the name of the _component_ you will notice a c
 In the TypeScript code, you see `title` property assignment, which is what is displayed in Augury's _Properties_ tab.
 
 ```js
- title = 'Angular Form: New User';
- ```
+title = 'Angular Form: New User';
+```
 
 To return to Augury, click on the Augury tab.
 
@@ -134,20 +134,12 @@ In the code, looking at file `app.module.ts` we see 3 _components_ being declare
 
 ```js
 @NgModule({
-  declarations: [
-    AppComponent,
-    FormNewUserComponent,
-    UserInfoComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule
-  ],
-  providers: [NewUserService ],
+  declarations: [AppComponent, FormNewUserComponent, UserInfoComponent],
+  imports: [BrowserModule, FormsModule, HttpModule],
+  providers: [NewUserService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
 ```
 
 Looking at the graph, we see that `UserInfoComponent` is projected by `AppComponent`, the parent _component_. This is obvious if we look at the code (`app.component.ts`), in the _template_ string we see `<app-user-info>` being used.
