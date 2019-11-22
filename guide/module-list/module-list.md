@@ -1,6 +1,6 @@
 <img src="images/app-module-demo.png" style="width: 90%" alt="App Module Demo" />
 
-<a href="/examples/modules/app/index.html" target="_blank">Launch Demo Application</a>
+<a href="/examples/modules" target="_blank">Launch Demo Application</a>
 
 ## Description
 
