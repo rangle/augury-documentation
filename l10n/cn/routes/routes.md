@@ -1,6 +1,6 @@
 ![Image NYC Metro](images/routes-nyc.png)
 
-<a href="/examples/routes/app/index.html" target="blank">Launch Demo Application</a>
+<a href="/examples/routes" target="blank">Launch Demo Application</a>
 
 ## Description
 
