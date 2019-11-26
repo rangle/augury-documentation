@@ -88,3 +88,10 @@ Take a look at the bottom of the router tree, you will notice `cities [Lazy]`, t
 ![Image Lazy routes](images/routes-lazy.gif)
 
 That is all there is to Angular routes. We have looked at `router-outlet`, router tree and how it represents the path to the view and finally noticing lazy loaded routes.
+
+As shown in both images there is a route called `no-name-route` these usually occur when Augury is not able to find a proper name for the route. The way Augury detects the name of a route is through:
+
+1. Checking if a component is connected to the route. If so, use the name of that component
+2. If there is no component, Augury checks if it's a _lazy route_, if so it will specify the name as `path + [Lazy]`, example `cities [Lazy]`
+3. If there is no component and it's not a _lazy route_. Augury will check if it's a redirect route, if it is - Augury will return `path -> redirecting to -> redirectPath` example `cities -> redirecting to -> /cities/home`
+4. If none of the above matches, Augury will return `no-name-route`, ideally this shouldn't happen.
