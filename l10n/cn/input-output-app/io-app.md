@@ -1,6 +1,6 @@
 <img src="images/io-app.png" style="width: 100%">
 
-<a href="/examples/input-output" target="blank">Launch Demo Application</a>
+<a href="/examples/#/input-output" target="blank">Launch Demo Application</a>
 
 ## Description
 

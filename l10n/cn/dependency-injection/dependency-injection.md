@@ -1,6 +1,6 @@
 ![Image Empty Form](images/form-empty.png)
 
-<a href="/examples/dependency-injection" target="blank">Launch Demo Application</a>
+<a href="/examples/#/dependency-injection" target="blank">Launch Demo Application</a>
 
 ## Description
 
